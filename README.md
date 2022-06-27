@@ -1,24 +1,46 @@
-# README
+# Budget Manager
+Budget Manager is a Ruby on Rails capstone project about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.  The application allows the user to:  register and log in, so that the data is private to them. introduce new transactions associated with a category. see the money spent on each category.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+* Ruby
+* Rails
+* Postgresql
+## Clone Project
+- STEP 1:
+  - git clone `https://github.com/jerryowusu/BudgetManager.git`
+- STEP 2:
+  - `cd BudgetManager` in your terminal
+- STEP 3:
+  - run `rails server` or `rails s` in your terminal
+- STEP 4:
+  - visit `localhost:3000` on your browser
 
-Things you may want to cover:
+## Technologies Used
+* Language (Ruby on Rails)
+* PostgreSQL
 
-* Ruby version
+## Installation
+* Ruby
+* Rails
+* Postgresql
 
-* System dependencies
+## 👤 Author
+Jerry Owusu
 
-* Configuration
+- GitHub: [@jerryowusu](https://github.com/jerryowusu)
+- Twitter: [@JerryOwusu](https://twitter.com/JerryOwusu)
+- LinkedIn: [Jerry Owusu](https://linkedin.com/in/Jerry-Owusu-5430065b)
 
-* Database creation
+## Contributing :handshake:
+Contributions, issues, and feature requests are welcome!
 
-* Database initialization
+## Show your support
+Give a 	:star: if you like this project.
 
-* How to run the test suite
+## Acknowledgments
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License :memo:
+This project is [MIT](LICENCE) licensed
