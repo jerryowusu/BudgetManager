@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,57 +12,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_01_152724) do
+ActiveRecord::Schema[7.0].define(version: 20_220_701_185_243) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "categories", force: :cascade do |t|
-    t.string "name"
-    t.string "icon"
-    t.integer "total_amount", default: 0
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_categories_on_user_id"
+  create_table 'categories', force: :cascade do |t|
+    t.string 'name'
+    t.string 'icon'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.integer 'user_id'
   end
 
-  create_table "category_payments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "category_id", null: false
-    t.bigint "payment_id", null: false
-    t.index ["category_id"], name: "index_category_payments_on_category_id"
-    t.index ["payment_id"], name: "index_category_payments_on_payment_id"
+  create_table 'exchanges', force: :cascade do |t|
+    t.string 'name'
+    t.float 'amount'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.integer 'author_id'
   end
 
-  create_table "payments", force: :cascade do |t|
-    t.string "name"
-    t.integer "amount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_payments_on_user_id"
+  create_table 'slots', force: :cascade do |t|
+    t.bigint 'category_id'
+    t.bigint 'exchange_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['category_id'], name: 'index_slots_on_category_id'
+    t.index ['exchange_id'], name: 'index_slots_on_exchange_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.string "confirmation_token"
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'name'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.string 'email', default: '', null: false
+    t.string 'encrypted_password', default: '', null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_sent_at'
+    t.datetime 'remember_created_at'
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
-
-  add_foreign_key "categories", "users"
-  add_foreign_key "category_payments", "categories"
-  add_foreign_key "category_payments", "payments"
-  add_foreign_key "payments", "users"
 end
