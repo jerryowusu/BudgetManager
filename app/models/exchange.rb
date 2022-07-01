@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Exchange < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :slots
