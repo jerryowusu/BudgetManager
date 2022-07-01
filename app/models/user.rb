@@ -4,16 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :categories, dependent: :destroy
-  has_many :payments, dependent: :destroy
+  has_many :categories
+  has_many :exchanges, foreign_key: 'author_id'
 
-  validates :name, presence: true
-
-  def most_recent_categories
-    categories.order(created_at: :desc).limit(3)
-  end
-
-  def most_ancient_categories
-    categories.order(created_at: :asc).limit(3)
-  end
+  validates :name, presence: true, length: { maximum: 50 }
 end
