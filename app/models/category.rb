@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Category < ApplicationRecord
   belongs_to :user, class_name: 'User'
   has_many :slots

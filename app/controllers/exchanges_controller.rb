@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ExchangesController < ApplicationController
   before_action :set_exchanges, only: %i[show edit update destroy]
   before_action :authenticate_user!
