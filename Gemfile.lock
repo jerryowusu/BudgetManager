@@ -300,7 +300,7 @@ DEPENDENCIES
   rails-controller-testing
   rspec-rails (~> 6.0.0.rc1)
   rubocop (>= 1.0, < 2.0)
-  sassc-rails
+  sassc-rails (~> 2.1, >= 2.1.2)
   selenium-webdriver
   shoulda-matchers (~> 5.0)
   sprockets-rails
