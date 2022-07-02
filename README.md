@@ -6,7 +6,7 @@ Budget Manager is a Ruby on Rails capstone project about building a mobile web a
 * Rails
 * Postgresql
 
-[Zoom Video](https://drive.google.com/file/d/1JjWSR05XG6RKwLy7hv6Tyf-JZwi6t8ro/view?usp=sharing)
+[zoom Video](https://drive.google.com/file/d/1UyQRIaSCpa0_XA_WQLkAGXXtFAaCz2PR/view?usp=sharing)
 
 [live Demo](https://true-lumberjack-62637.herokuapp.com/)
 ## Clone Project
