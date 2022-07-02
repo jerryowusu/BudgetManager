@@ -3,21 +3,21 @@ require 'rails_helper'
 RSpec.describe 'exchanges/index', type: :feature do
   before(:each) do
     @jerry = User.create(name: 'Jerry', email: 'jerry@gmail.com',
-      password: '123456', created_at: Time.now, updated_at: Time.now)
+                         password: '123456', created_at: Time.now, updated_at: Time.now)
 
-@cat1 = Category.create(name: 'Category_1', icon: 'https://static.thenounproject.com/png/407799-200.png',
-         user: @jerry)
-Category.create(name: 'Category_2', icon: 'https://static.thenounproject.com/png/407799-200.png', user: @jerry)
+    @cat1 = Category.create(name: 'Category_1', icon: 'https://static.thenounproject.com/png/407799-200.png',
+                            user: @jerry)
+    Category.create(name: 'Category_2', icon: 'https://static.thenounproject.com/png/407799-200.png', user: @jerry)
 
-@ex1 = Exchange.create(name: 'transaction 1', amount: '200', author: @jerry)
-@ex1.categories << @cat1
-@ex2 = Exchange.create(name: 'transaction 2', amount: '120', author: @jerry)
-@ex2.categories << @cat1
+    @ex1 = Exchange.create(name: 'transaction 1', amount: '200', author: @jerry)
+    @ex1.categories << @cat1
+    @ex2 = Exchange.create(name: 'transaction 2', amount: '120', author: @jerry)
+    @ex2.categories << @cat1
 
-visit new_user_session_path
-fill_in 'Email', with: 'jerry@gmail.com'
-fill_in 'Password', with: '123456'
-click_button 'Log in'
+    visit new_user_session_path
+    fill_in 'Email', with: 'jerry@gmail.com'
+    fill_in 'Password', with: '123456'
+    click_button 'Log in'
   end
 
   after(:each) do
