@@ -5,6 +5,10 @@ Budget Manager is a Ruby on Rails capstone project about building a mobile web a
 * Ruby
 * Rails
 * Postgresql
+
+[zoom Video](https://drive.google.com/file/d/1UyQRIaSCpa0_XA_WQLkAGXXtFAaCz2PR/view?usp=sharing)
+
+[live Demo](https://dudley-poppy-97906.herokuapp.com/)
 ## Clone Project
 - STEP 1:
   - git clone `https://github.com/jerryowusu/BudgetManager.git`
@@ -14,6 +18,17 @@ Budget Manager is a Ruby on Rails capstone project about building a mobile web a
   - run `rails server` or `rails s` in your terminal
 - STEP 4:
   - visit `localhost:3000` on your browser
+
+### Run Test
+
+- To run models tests
+```bash
+rspec spec/
+
+   or
+
+bundle exec rspec spec/
+```
 
 ## Technologies Used
 * Language (Ruby on Rails)
@@ -38,9 +53,9 @@ Contributions, issues, and feature requests are welcome!
 Give a 	:star: if you like this project.
 
 ## Acknowledgments
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- Hat tip to anyone whose code was used
+- Thanks to [Microverse](https://www.microverse.org/)
+- Great thanks to [Gregoire Vella on Behance](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) for design template.
 
 ## License :memo:
 This project is [MIT](LICENCE) licensed
