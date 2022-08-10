@@ -8,7 +8,7 @@ Budget Manager is a Ruby on Rails capstone project about building a mobile web a
 
 [zoom Video](https://drive.google.com/file/d/1UyQRIaSCpa0_XA_WQLkAGXXtFAaCz2PR/view?usp=sharing)
 
-[live Demo](https://dudley-poppy-97906.herokuapp.com/)
+[live Demo](https://budget-manager1.herokuapp.com/)
 ## Clone Project
 - STEP 1:
   - git clone `https://github.com/jerryowusu/BudgetManager.git`
